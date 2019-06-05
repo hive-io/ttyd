@@ -1,0 +1,14 @@
+[Unit]
+Description=Host Terminal Proxy
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Environment=LOG_FILE=/var/log/%N.log
+ExecStart=/usr/bin/ttyd -p 3002 ssh admin1@localhost
+Type=simple
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=hive-rest.service
