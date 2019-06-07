@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Boyuan Yang <073plan@gmail.com>
 Build-Depends:
  debhelper (>= 9),
+ dh-systemd,
  cmake,
  pkg-config,
  libwebsockets-dev,
